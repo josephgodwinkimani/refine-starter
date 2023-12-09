@@ -1,0 +1,31 @@
+{
+    "name": "com.refine.app",
+    "displayName": "Refine",
+    "version": "1.0.0",
+    "description": "Open-source Retool for Enterprise.",
+    "keywords": [
+        "ecosystem:cordova"
+    ],
+    "license": "Apache-2.0",
+    "author": "Apache Cordova Team",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "devDependencies": {
+        "cordova-android": "12.0.1"
+    },
+    "authors": [
+        {
+            "name": "Godwin Kimani",
+            "email": "josephgodwinke@gmx.com",
+            "homepage": "http://kimani.gocho.live",
+            "role": "Developer"
+        }
+    ],
+    "cordova": {
+        "platforms": [
+            "android"
+        ]
+    }
+}

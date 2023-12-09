@@ -1,0 +1,9 @@
+{
+    "recommendations": [
+        "tauri-apps.tauri-vscode",
+        "msjsdiag.cordova-tools",
+        "dbaeumer.vscode-eslint",
+        "antfu.vite",
+        "panicbit.cargo"
+    ]
+}

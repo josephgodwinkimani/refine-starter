@@ -1,0 +1,6 @@
+{
+    "vite.buildCommand": "pnpm run build",
+    "vite.devCommand": "pnpm run dev",
+    "vite.port": 4000,
+    "vite.showTerminal": true
+}

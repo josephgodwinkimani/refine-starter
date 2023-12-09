@@ -1,0 +1,102 @@
+{
+  "name": "refine-project",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Refine Boilerplate for Web (PWA), Desktop and Mobile",
+  "homepage": "https://github.com/josephgodwinkimani/refine-starter",
+  "bugs": {
+    "url": "https://github.com/josephgodwinkimani/refine-starter/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/josephgodwinkimani/refine-starter.git"
+  },
+  "type": "module",
+  "scripts": {
+    "android": "cd cordova && cordova run android",
+    "android:build": "cd cordova && cordova build android",
+    "build": "tsc && refine build",
+    "clippy": "cargo clippy --manifest-path ./src-tauri/Cargo.toml",
+    "dev": "refine dev",
+    "fix": "eslint src --ext ts,tsx --fix",
+    "postinstall": "cd cordova && pnpm install",
+    "ios": "cd cordova && cordova run ios",
+    "ios:build": "cd cordova && cordova build ios",
+    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives",
+    "preview": "refine start",
+    "refine": "refine"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "eslint \"src/**/*.ts\" --fix"
+    ],
+    "package.json": [
+      "sort-package-json"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "dependencies": {
+    "@emotion/react": "^11.8.2",
+    "@emotion/styled": "^11.8.1",
+    "@mui/icons-material": "^5.8.3",
+    "@mui/lab": "^5.0.0-alpha.85",
+    "@mui/material": "^5.8.6",
+    "@mui/x-data-grid": "^6.6.0",
+    "@refinedev/cli": "^2.7.4",
+    "@refinedev/core": "^4.28.2",
+    "@refinedev/devtools": "^1.1.6",
+    "@refinedev/inferencer": "^4.3.2",
+    "@refinedev/kbar": "^1.1.2",
+    "@refinedev/mui": "^5.0.0",
+    "@refinedev/react-hook-form": "^4.1.2",
+    "@refinedev/react-router-v6": "^4.1.0",
+    "@refinedev/simple-rest": "5.0.0",
+    "@tauri-apps/api": "1.5.1",
+    "i18next": "^20.1.0",
+    "i18next-browser-languagedetector": "^6.1.1",
+    "i18next-xhr-backend": "^3.2.2",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-hook-form": "^7.30.0",
+    "react-i18next": "^11.8.11",
+    "react-router-dom": "^6.8.1"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "1.5.7",
+    "@types/node": "^18.16.2",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.57.1",
+    "@typescript-eslint/parser": "^5.57.1",
+    "@vitejs/plugin-react": "^4.0.0",
+    "eslint": "^8.38.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.3.4",
+    "eslint-plugin-simple-import-sort": "10.0.0",
+    "husky": "8.0.3",
+    "lint-staged": "15.2.0",
+    "sort-package-json": "2.6.0",
+    "typescript": "^4.7.4",
+    "vite": "^4.3.1",
+    "vite-plugin-pwa": "0.17.4"
+  },
+  "authors": [
+    {
+      "name": "Godwin Kimani",
+      "email": "josephgodwinke@gmx.com",
+      "homepage": "http://kimani.gocho.live",
+      "role": "Developer"
+    }
+  ]
+}

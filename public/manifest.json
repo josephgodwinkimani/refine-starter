@@ -1,0 +1,36 @@
+{
+    "short_name": "Refine",
+    "name": "Refine Boilerplate for Web (PWA), Desktop and Mobile",
+    "theme_color": "#ffffff",
+    "scope": "/",
+    "start_url": ".",
+    "display": "standalone",
+    "icons": [
+        {
+            "src": "assets/maskable_icon_x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "assets/maskable_icon_x512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "assets/maskable_icon_x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "assets/apple-touch-icon-180x180.png",
+            "sizes": "180x180",
+            "type": "image/png"
+        },
+        {
+            "src": "assets/maskable_icon_x64.png",
+            "sizes": "64x64",
+            "type": "image/png"
+        }
+    ]
+}

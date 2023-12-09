@@ -1,0 +1,70 @@
+name: Lint Rust Code
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  eslint_and_clippy:
+    strategy:
+      fail-fast: true
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository code
+        uses: actions/checkout@v3     
+
+      - uses: actions/cache@v3
+        with:
+          path: ./src-tauri/target
+          key: ${{ hashFiles('./src-tauri/Cargo.lock') }}
+
+      - uses: actions/cache@v3
+        with:
+          path: ~/.cargo
+          key: ${{ hashFiles('./src-tauri/Cargo.lock') }}
+
+      - uses: pnpm/action-setup@v2
+        name: Install pnpm
+        with:
+          version: 8
+          run_install: false
+
+      - name: Get pnpm store directory
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
+
+      - uses: actions/cache@v3
+        name: Setup pnpm cache
+        with:
+          path: ${{ env.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+     
+      - name: Install Rust with Clippy
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          components: rustfmt, clippy
+
+      - name: Install Tauri dependencies
+        run: |
+          sudo apt-get update
+          sudo apt install libdbus-1-dev libwebkit2gtk-4.0-dev build-essential curl wget libssl-dev libgtk-3-dev libayatana-appindicator3-dev librsvg2-dev
+
+      - name: Create empty 'dist' directory for Tauri generate context
+        run: mkdir dist
+ 
+      - name: Install node dependencies
+        run: pnpm install
+
+      - name: Run Eslint
+        run: pnpm run lint
+ 
+      - name: Run Clippy
+        run: pnpm run clippy
