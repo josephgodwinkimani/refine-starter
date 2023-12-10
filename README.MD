@@ -1,5 +1,6 @@
 # Refine Boilerplate for Web (PWA), Desktop and Mobile
 
+[![Maintainability](https://api.codeclimate.com/v1/badges/690eaa53601462833ba9/maintainability)](https://codeclimate.com/github/josephgodwinkimani/refine-starter/maintainability)
 [![Desktop Publish](https://github.com/josephgodwinkimani/refine-starter/actions/workflows/release-desktop.yml/badge.svg)](https://github.com/josephgodwinkimani/refine-starter/actions/workflows/release-desktop.yml)
 [![Cordova Build](https://github.com/josephgodwinkimani/refine-starter/actions/workflows/build-cordova.yml/badge.svg)](https://github.com/josephgodwinkimani/refine-starter/actions/workflows/build-cordova.yml)
 [![Lint](https://github.com/josephgodwinkimani/refine-starter/actions/workflows/lint.yml/badge.svg)](https://github.com/josephgodwinkimani/refine-starter/actions/workflows/lint.yml)
