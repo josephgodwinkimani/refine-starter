@@ -124,6 +124,7 @@ _to build android app_
 
 - [Nest.js GraphQL, Prisma, Docker API Starter](https://github.com/josephgodwinkimani/nestjs-graphql-prisma) — Nest.js Hybrid Application (HTTP server with microservice listeners) with GraphQL (schema first), Prisma, MySQL (easily replaceble), MongoDB, Jest, Docker.
 - [Laravel Boilerplate for building REST APIs](https://github.com/josephgodwinkimani/laravel-api-boilerplate) — A Laravel boilerplate for building REST APIs that support multi-tenancy, multiple MIME types using Fractal, API documentation, Eloquent model monitoring, and other credible libraries. 
+- [nestjsx/crud Starter](https://github.com/josephgodwinkimani/nestjsx-crud-starter) — @nestjsx/crud starter repository for RESTful APIs running on Fastify.
 - 
 
 ## Learn More
